@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Teams</title>
+</head>
+<body>
+<h1>All Teams</h1>
+<ul>
+  <li th:each="team : ${teams}" th:object="${team}">
+    <a th:href="@{'/teams/' + ${teams.indexOf(team)}}" th:text="*{teamName}"></a>
+  </li>
+</ul>
+</body>
+</html>

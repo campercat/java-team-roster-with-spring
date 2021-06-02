@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Teams</title>
+</head>
+<body>
+<!--<ul>-->
+<!--  <li th:each="team : ${teams}" th:object="${team}">-->
+<!--    <a th:href="@{'/teams/' + ${teams.indexOf(team)}}" th:text="*{teamName}"></a>-->
+<!--  </li>-->
+<!--</ul>-->
+<div th:object="${selectedTeam}">
+  <h1 th:text="*{teamName}"></h1>
+  <ul>
+    <li th:each="player : *{players}" th:text="${player.name} + ': ' + ${player.position}">
+    </li>
+  </ul>
+</div>
+</body>
+</html>
